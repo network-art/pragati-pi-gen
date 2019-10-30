@@ -1,4 +1,7 @@
-postrun.sh
-.pc
 *-pc
+*~
+.pc
 apt-cacher-ng/
+deploy/
+postrun.sh
+work/
