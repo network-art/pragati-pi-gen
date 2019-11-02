@@ -6,8 +6,6 @@ libgtest-dev
 libjpeg-dev
 libpng12-dev
 libudev-dev
-liburdfdom-dev
-liburdfdom-headers-dev
 python-numpy
 python-sip-dev
 zlib1g-dev
