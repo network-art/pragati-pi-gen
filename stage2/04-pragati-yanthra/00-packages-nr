@@ -1,5 +1,16 @@
 libboost1.58-all-dev
 libeigen3-dev
+libgflags-dev
+libgoogle-glog-dev
 libgtest-dev
+libjpeg-dev
+libpng12-dev
 libpoco-dev
+libtinyxml-dev
+libtinyxml2-dev
 libudev-dev
+liburdfdom-dev
+liburdfdom-headers-dev
+python-numpy
+python-sip-dev
+zlib1g-dev
