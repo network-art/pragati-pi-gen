@@ -1,7 +1,5 @@
 libbz2-dev
 libeigen3-dev
-libgflags-dev
-libgoogle-glog-dev
 libgtest-dev
 libjpeg-dev
 libpng12-dev
