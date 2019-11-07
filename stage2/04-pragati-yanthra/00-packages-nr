@@ -3,7 +3,11 @@ libeigen3-dev
 libgtest-dev
 libjpeg-dev
 libpng12-dev
+libssl-dev
 libudev-dev
+python-defusedxml
 python-numpy
+python-rospkg
 python-sip-dev
+telnetd
 zlib1g-dev
