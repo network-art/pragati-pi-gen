@@ -6,6 +6,7 @@ libpng12-dev
 libssl-dev
 libudev-dev
 python-defusedxml
+python-netifaces
 python-numpy
 python-rospkg
 python-sip-dev

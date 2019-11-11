@@ -24,8 +24,8 @@ install -v -m 644 files/ros.ld.so.conf       "${ROOTFS_DIR}/etc/ld.so.conf.d/"
 install -v -m 644 files/yanthra-profile.sh   "${ROOTFS_DIR}/etc/profile.d/"
 install -v -m 644 files/yanthra.ld.so.conf   "${ROOTFS_DIR}/etc/ld.so.conf.d/"
 
-echo "network={\
-	ssid=\"GroboMac\"\
-	psk=ac11d7744065093efa44637ebb060637ecf0f74f84386b84213b5fa3f73cedaa\
-}\
+echo -e "network={\n\
+\tssid=\"GroboMac\"\n\
+\tpsk=ac11d7744065093efa44637ebb060637ecf0f74f84386b84213b5fa3f73cedaa\n\
+}\n\
 " >> "${ROOTFS_DIR}/etc/wpa_supplicant/wpa_supplicant.conf"
