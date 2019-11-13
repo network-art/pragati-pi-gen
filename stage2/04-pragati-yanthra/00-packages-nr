@@ -1,5 +1,6 @@
 libbz2-dev
 libeigen3-dev
+libglu1-mesa-dev freeglut3-dev mesa-common-dev
 libgtest-dev
 libjpeg-dev
 libpng12-dev
