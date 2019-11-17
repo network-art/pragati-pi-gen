@@ -2,6 +2,10 @@
 
 this_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
+on_chroot << EOF
+systemctl disable dphys-swapfile
+EOF
+
 cd ${ROOTFS_DIR}/lib/arm-linux-gnueabihf && \
 		ln -sf librt-2.28.so librt.so
 
