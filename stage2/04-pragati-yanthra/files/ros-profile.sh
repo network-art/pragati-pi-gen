@@ -1,1 +1,1 @@
-export PATH=$PATH:/usr/local/ros/bin
+export PATH=$PATH:/usr/local/ros/arm-linux-gnueabihf/bin

@@ -16,6 +16,7 @@ cd ${ROOTFS_DIR}/usr/lib/arm-linux-gnueabihf && \
 		ln -sf ../../../lib/arm-linux-gnueabihf/libz.so.1.2.11 libz.so
 
 cd ${this_dir}
+mkdir -p ${ROOTFS_DIR}/usr/local/yanthra
 cp -v             files/etc_profile          "${ROOTFS_DIR}/etc/profile"
 install -v -m 644 files/010_pragati-nopasswd "${ROOTFS_DIR}/etc/sudoers.d/"
 install -v -m 644 files/issue                "${ROOTFS_DIR}/etc/"
