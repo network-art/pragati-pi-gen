@@ -128,6 +128,10 @@ if [ -f config ]; then
 	source config
 fi
 
+if [ -f ../../VERSION ]; then
+	source ../../VERSION
+fi
+
 while getopts "c:" flag
 do
 	case "$flag" in
@@ -151,8 +155,8 @@ fi
 
 export USE_QEMU="${USE_QEMU:-0}"
 export IMG_DATE="${IMG_DATE:-"$(date +%Y-%m-%d)"}"
-export IMG_FILENAME="${IMG_FILENAME:-"${IMG_DATE}-${IMG_NAME}"}"
-export ZIP_FILENAME="${ZIP_FILENAME:-"image_${IMG_DATE}-${IMG_NAME}"}"
+export IMG_FILENAME="${IMG_FILENAME}${PRAGATI_VERSION_IN_SUFFIX}"
+export ZIP_FILENAME="${ZIP_FILENAME}${PRAGATI_VERSION_IN_SUFFIX}"
 
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export SCRIPT_DIR="${BASE_DIR}/scripts"
