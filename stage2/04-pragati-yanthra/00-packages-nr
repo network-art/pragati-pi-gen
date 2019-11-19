@@ -12,4 +12,5 @@ python-numpy
 python-rospkg
 python-sip-dev
 telnetd
+tftp-hpa
 zlib1g-dev
