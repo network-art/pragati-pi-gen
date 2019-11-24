@@ -10,6 +10,7 @@ python-defusedxml
 python-netifaces
 python-numpy
 python-rospkg
+python-gpiozero
 python-sip-dev
 telnetd
 tftp-hpa
