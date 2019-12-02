@@ -21,6 +21,13 @@ cd ${ROOTFS_DIR}/usr/lib/arm-linux-gnueabihf && \
 
 cd ${this_dir}
 mkdir -p ${ROOTFS_DIR}/usr/local/yanthra
+# We will first remove existing run-time data and then recreate directories.
+rm -rf ${ROOTFS_DIR}/var/yanthra
+mkdir -p ${ROOTFS_DIR}/var/yanthra/{debug,input,output}
+on_chroot <<EOF
+chown -R $FIRST_USER_NAME:$FIRST_USER_NAME /var/yanthra
+EOF
+
 cp -v             files/etc_profile          "${ROOTFS_DIR}/etc/profile"
 install -v -m 644 files/010_pragati-nopasswd "${ROOTFS_DIR}/etc/sudoers.d/"
 install -v -m 644 files/issue                "${ROOTFS_DIR}/etc/"
