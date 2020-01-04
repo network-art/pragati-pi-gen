@@ -3,9 +3,11 @@ libeigen3-dev
 libglu1-mesa-dev freeglut3-dev mesa-common-dev
 libgtest-dev
 libjpeg-dev
+libjson-c-dev
 libpng12-dev
 libssl-dev
 libudev-dev
+libusb-dev libusb-1.0-0-dev
 python-defusedxml
 python-netifaces
 python-numpy
