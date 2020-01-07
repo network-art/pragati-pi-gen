@@ -1,0 +1,11 @@
+[Unit]
+Description=PragatiOS CLI Daemon
+After=syslog.target network.target
+
+[Service]
+ExecStart=/usr/bin/clid
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+Alias=clid.service
