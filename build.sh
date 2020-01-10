@@ -181,6 +181,8 @@ export TIMEZONE_DEFAULT="${TIMEZONE_DEFAULT:-Europe/London}"
 
 export GIT_HASH=${GIT_HASH:-"$(git rev-parse HEAD)"}
 
+export DIST_UPGRADE="${DIST_UPGRADE:-0}"
+
 export BASE_DIR
 
 export CLEAN
