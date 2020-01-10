@@ -20,6 +20,7 @@ cd ${ROOTFS_DIR}/usr/lib/arm-linux-gnueabihf && \
 		ln -sf ../../../lib/arm-linux-gnueabihf/libz.so.1.2.11 libz.so
 
 cd ${this_dir}
+mkdir -p ${ROOTFS_DIR}/etc/pragati
 mkdir -p ${ROOTFS_DIR}/usr/local/yanthra
 # We will first remove existing run-time data and then recreate directories.
 rm -rf ${ROOTFS_DIR}/var/yanthra
@@ -40,20 +41,14 @@ install -v -m 644 files/ros.ld.so.conf       "${ROOTFS_DIR}/etc/ld.so.conf.d/"
 install -v -m 644 files/services             "${ROOTFS_DIR}/etc/"
 install -v -m 644 files/yanthra-profile.sh   "${ROOTFS_DIR}/usr/local/yanthra/"
 install -v -m 644 files/yanthra.ld.so.conf   "${ROOTFS_DIR}/etc/ld.so.conf.d/"
+install -v -m 755 files/rc.local             "${ROOTFS_DIR}/etc/"
 
 on_chroot <<EOF
 systemctl enable clid
+systemctl stop wpa_supplicant
+systemctl disable wpa_supplicant
+systemctl stop dnsmasq
+systemctl disable dnsmasq
+systemctl stop hostapd
+systemctl disable hostapd
 EOF
-
-echo -e "network={\n\
-\tssid=\"GroboMac\"\n\
-\tpsk=ac11d7744065093efa44637ebb060637ecf0f74f84386b84213b5fa3f73cedaa\n\
-\tpriority=1\n\
-}\n\
-" >> "${ROOTFS_DIR}/etc/wpa_supplicant/wpa_supplicant.conf"
-echo -e "network={\n\
-\tssid=\"Saadhana\"\n\
-\tpsk=8185120db0279a7ce405f1bd1e7322a76c2e8940a6e41511e3187f55557a8ff1\n\
-\tpriority=0\n\
-}\n\
-" >> "${ROOTFS_DIR}/etc/wpa_supplicant/wpa_supplicant.conf"
